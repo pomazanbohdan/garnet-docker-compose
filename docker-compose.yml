@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+  garnet:
+    image: yzy613/garnet:latest
+    # image: altall/garnet:v1.0.0
+    container_name: garnet
+    command:
+      /app/GarnetServer.exe --config-import-path /data/config/garnet.json
+    restart: unless-stopped
+    ports:
+      - 3278:3278
+    volumes:
+      - ./garnet.json:/data/config/garnet.json
+      - ./LogDir:/app/LogDir
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "6"
