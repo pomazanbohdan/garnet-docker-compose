@@ -6,7 +6,7 @@ services:
     # image: altall/garnet:v1.0.0
     container_name: garnet
     command:
-      /app/GarnetServer.exe --config-import-path /data/config/garnet.json
+      --config-import-path /data/config/garnet.json
     restart: unless-stopped
     ports:
       - 3278:3278
