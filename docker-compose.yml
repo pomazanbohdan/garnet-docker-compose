@@ -1,5 +1,3 @@
-version: "3.5"
-
 services:
   garnet:
     image: ghcr.io/microsoft/garnet:latest
