@@ -2,7 +2,8 @@ version: "3.5"
 
 services:
   garnet:
-    image: yzy613/garnet:latest
+    image: ghcr.io/microsoft/garnet:latest
+    # image: yzy613/garnet:latest
     # image: altall/garnet:v1.0.0
     container_name: garnet
     command:
